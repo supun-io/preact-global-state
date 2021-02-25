@@ -1,14 +1,14 @@
 {
     "name": "preact-global-state",
-    "version": "0.3.0",
+    "version": "1.0.1",
     "description": "Global State for Preact",
     "license": "MIT",
-    "homepage": "https://github.com/yezyilomo/state-pool/blob/master/README.md",
-    "repository": "https://github.com/yezyilomo/state-pool",
-    "bugs": "https://github.com/yezyilomo/state-pool/issues",
+    "homepage": "https://github.com/SupunKavinda/preact-global-state/blob/master/README.md",
+    "repository": "https://github.com/SupunKavinda/preact-global-state",
+    "bugs": "https://github.com/SupunKavinda/preact-global-state/issues",
     "keywords": [
-        "state",
-        "immutable"
+        "preact",
+        "state"
     ],
     "authors": [
         "Supun Kavinda <supunkavinda1125@gmail.com> (https://supunkavinda.blog)"
@@ -19,9 +19,6 @@
         "lib",
         "src"
     ],
-    "scripts": {
-        "test": "jest"
-    },
     "dependencies": {
         "preact": "^10.5.12"
     },
