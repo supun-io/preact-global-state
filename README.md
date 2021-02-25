@@ -1,4 +1,4 @@
-This is a simple version (79 lines, 200 bytes minified gziped) of [React state-pool](https://github.com/yezyilomo/state-pool). This only contains one Preact hook, `useGlobalState` that can be used to set/get global state.
+This is a simple version (79 lines, 200 bytes minified gziped) of [React state-pool](https://github.com/yezyilomo/state-pool). This only contains one Preact hook, `useGlobalState` that can be used to set/get global states.
 
 ## Installing
 
@@ -21,8 +21,8 @@ function App() {
     return (
         <div>
             The Name: { name }
+            <button onClick={() => setName('Another name')}></button>   
         </div>
-        <button onClick={() => setName('Another name')}></button>
     )
 }
 
