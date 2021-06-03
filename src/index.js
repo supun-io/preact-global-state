@@ -52,7 +52,11 @@ function Store() {
 
 }
 
-function useGlobalState(key, defaultValue = null) {
+function useGlobalState(key, defaultValue) {
+
+    if (typeof defaultValue === 'undefined') {
+        defaultValue = null;
+    }
 
     const [, setState] = useState();
     var globalState = store.getState(key, defaultValue);
