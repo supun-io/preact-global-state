@@ -63,14 +63,14 @@ function useGlobalState(key, defaultValue = null) {
         setState({});
     }
 
-    useEffect(() => {
+    useEffect(function() {
         globalState.subscribe(reRender);
-        return () => {
+        return function() {
             globalState.unsubscribe(reRender);
         }
     });
 
-    return [currentState, (v) => globalState.setValue(v)];
+    return [currentState, function(v) {globalState.setValue(v)}];
 
 }
 
