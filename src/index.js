@@ -11,7 +11,7 @@ function GlobalState(initialValue) {
             return
         }
         this.value = newState;
-        this.subscribers.forEach(subscriber => {
+        this.subscribers.forEach(function(subscriber) {
             subscriber(this.value);
         });
     }
@@ -24,7 +24,7 @@ function GlobalState(initialValue) {
     }
     this.unsubscribe = function (itemToUnsubscribe) {
         this.subscribers = this.subscribers.filter(
-            subscriber => subscriber !== itemToUnsubscribe
+            function(subscriber) { return subscriber !== itemToUnsubscribe }
         );
     }
 }
