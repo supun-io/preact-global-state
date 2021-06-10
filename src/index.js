@@ -11,8 +11,10 @@ function GlobalState(initialValue) {
             return
         }
         this.value = newState;
+
+        var self = this;
         this.subscribers.forEach(function(subscriber) {
-            subscriber(this.value);
+            subscriber(self.value);
         });
     }
     this.subscribe = function (itemToSubscribe) {
@@ -58,7 +60,7 @@ function useGlobalState(key, defaultValue) {
         defaultValue = null;
     }
 
-    const [, setState] = useState();
+    var [, setState] = useState();
     var globalState = store.getState(key, defaultValue);
     
     var currentState = globalState.getValue();
@@ -78,6 +80,6 @@ function useGlobalState(key, defaultValue) {
 
 }
 
-const store = new Store();
+var store = new Store();
 
 export { useGlobalState, store };
